@@ -27,7 +27,7 @@ Durante este curso aprenderán lo necesario para llevar una aplicación casera d
 - [Ejercicios prácticos](/practica/02/)
 
 
-### 03 - Redes y volumenes de contenedores Docker  (contenido/03-volumenes.md)
+### [03 - Volumenes y redes de contenedores Docker](contenido/03-volumenes.md)
 
 - Almacenamiento presistente en contenedores: volúmenes y enlaces de host
 - Redes en Docker: conceptos básicos y configuración
@@ -49,7 +49,7 @@ Durante este curso aprenderán lo necesario para llevar una aplicación casera d
 
 El proyecto integrador consiste en una aplicación funcional y poder contenerizarla en cualquier entorno utilizando Docker y Docker Compose. La aplicación consta de dos  servicios que interactúan entre sí para proporcionar funcionalidades específicas.
 
-### Esqueleto proyecto-integrador/
+### Esqueleto proyecto-integrador
 
 ```bash
 ├── docker-compose.yml
