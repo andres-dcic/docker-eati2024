@@ -1,5 +1,5 @@
 # Docker EATI 2024 
- <img src="/contenido/img/docker-2.png" width="100"> <img src="/contenido/img/logo.png" width="60" style="margin-left: 20px"  >
+ <img src="/contenido/img/docker-2.png" width="100"> <img src="/contenido/img/logo.png" width="100" style="margin-left: 20px"  >
 
 # Intro
 
