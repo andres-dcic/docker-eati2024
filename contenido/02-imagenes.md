@@ -331,161 +331,12 @@ Mantener todos los elementos que desea usar en una imagen en la misma carpeta lo
 .ipynb_checkpoints/*
 /notebooks/*
 /unused/*
-
 ```
-
-<!--
-## Imagenes a medida con Dockerfile 
-
-Si tenemos un Dockerfile como:
-
-```bash
-
-FROM alpine:latest
-LABEL description="This example Dockerfile installs NGINX."
-
-RUN apk add --update nginx && \
-    rm -rf /var/cache/apk/* && \
-    mkdir -p /tmp/nginx/
-
-COPY files/nginx.conf /etc/nginx/nginx.conf
-COPY files/default.conf /etc/nginx/conf.d/default.conf
-ADD files/html.tar.gz /usr/share/nginx/
-
-EXPOSE 80/tcp
-
-ENTRYPOINT ["nginx"]
-CMD ["-g", "daemon off;"]
-```
-
-Para nuestro __docker build__ podemos hacer la construccion
-```bash
-$ docker image build --file <path_to_Dockerfile> --tag <REPOSITORY>:<TAG> .
-```
-
-
-## Actualizando nuestra imagen
-
-Descargamos la imagen que queremos actualizar:
-
-```bash
-$ docker image pull alpine:latest
-```
-
-Arrancamos la imagen y operamos con ella:
-
-```bash
-$ docker container run -it --name alpine-test alpine /bin/sh
-```
-
-Si queremos instalar NGINX:
-```bash
-   $ apk update
-   $ apk upgrade
-   $ apk add --update nginx
-   $ rm -rf /var/cache/apk/*
-   $ mkdir -p /tmp/nginx/
-   $ exit
-   ```
-Tenemos que hacer nuestro commit:
-
-```bash
-   $ docker container commit <container_name> <REPOSITORY>:<TAG>
-```
-   
-Podemos guarda la imagen en un fichero TAR:
-
-```bash
-$ docker image save -o <name_of_file.tar> <REPOSITORY>:<TAG>
-```
--->
-
-<!--
-## Imagenes a desde cero
-
-Para crear una imagen desde cero tenemos un recurso 'scratch'
-
-```bash
-$ docker image build --tag local:fromscratch .
-```
-
-El fichero Dockerfile puede tener:
-
-```bash
-FROM scratch
-ADD files/alpine-minirootfs-3.6.1-x86_64.tar /
-CMD ["/bin/sh"]
- ```
-
- y para iniciarlo:
- ```bash
- $ docker container run -it --name alpine-test local:fromscratch /bin/sh
-``` 
-
-
-
-## Variables de entorno
-
-Con la instrucción ENV usaremos las variables de entorno recomendado usar un signo igual entre las expresiones, la ventaja es que ademas estas valores pueden consultarse desde dentro del contenedor
-
-
-ENV <key> <valor>
-ENV host sql
-  
-Ademas usando es signo '=' podemos usar varios por  linea:
-
-ENV nombre-usuario=admin password=1234
-
-Estas variables pueden consultarse con la orden:
-
-```bash
- $ docker image inspect <IMAGE_ID> | grep ENV
-```
--->
-
-<!--
-## Todo en uno:
-Ejemplo de uso, contenedores: v0.1.0:
-
-```bash
-# En este caso, haremos uso de una imagen que viene con PHP 7 y Apache
-FROM php:7.2-apache
-# Vamos a copiar el directorio src al default path que carga PHP al iniciar
-COPY src/ /var/www/html/
-```
-
-Para construir esta imagen
-
-```bash         
-docker build --tag apache-php:7 .
-```
-
-Para inicializar el containter:
-
-```bash         
-docker container run -d -p 8080:80  myapache-php7 
-```
-
-Para cambiar la version de PHP de 7 al 5: v0.4.0
-```bash
-docker image build --tag apache-php5 .
-```
-
-Para ejecutar este container:
-```bash       
- docker container run -d -p 9090:80  apache-php5 
- ```
-
-Por ultimo listamos las imagenes
-```bash
-docker image ls
-```
--->
 
 # Día 2 - Docker Lab
 
 
-# Creando nuestras propias imagenes
+# Creando nuestras propias imágenes
 
 ## Crear imagen de nuestra aplicación
 
@@ -561,7 +412,7 @@ my-app                  latest              7fbe18f0b4d4   15 minutes ago   410M
 my-app                  v0.1.0              7fbe18f0b4d4   15 minutes ago   410MB
 ```
 
-## Actualizando imágen
+## Actualizando imagen
 
 Para poder ver los beneficios de agregarle tags a las imagenes, podemos entonces generar una nueva versión de la misma.
 
