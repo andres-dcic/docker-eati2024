@@ -19,7 +19,7 @@ Durante este curso aprenderán lo necesario para llevar una aplicación casera d
 - `Laboratorio práctico: ejecución de su primer contenedor Docker y exploración de los comandos CLI de Docker`
 - [Ejercicios prácticos](/practica/01/)
 
-### 02 - Imagenes de contenedores Docker (contenido/02-imagenes.md)
+### [02 - Imagenes de contenedores Docker](contenido/02-imagenes.md)
 
 - Imágenes de Docker: comprensión de Dockerfiles, creación de imágenes y capas personalizadas.
 - Registros Docker: Registros públicos como Docker Hub, registros privados.
