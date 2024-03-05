@@ -19,23 +19,23 @@ Durante este curso aprenderán lo necesario para llevar una aplicación casera d
 - `Laboratorio práctico: ejecución de su primer contenedor Docker y exploración de los comandos CLI de Docker`
 - [Ejercicios prácticos](/practica/01/)
 
-### 02 - Imagenes de contenedores Docker 
+### 02 - Imagenes de contenedores Docker (contenido/02-imagenes.md)
 
 - Imágenes de Docker: comprensión de Dockerfiles, creación de imágenes y capas personalizadas.
 - Registros Docker: Registros públicos como Docker Hub, registros privados.
 - `Laboratorio práctico: creación de imágenes de Docker personalizadas e implementación de aplicaciones de contenedores múltiples`
-- Ejercicios prácticos
+- [Ejercicios prácticos](/practica/02/)
 
 
-### 03 - Redes y volumenes de contenedores Docker
+### 03 - Redes y volumenes de contenedores Docker  (contenido/03-volumenes.md)
 
-- Redes en Docker: conceptos básicos y configuración
 - Almacenamiento presistente en contenedores: volúmenes y enlaces de host
+- Redes en Docker: conceptos básicos y configuración
 - Comunicación entre contenedores
 - Exponer y probar nuestra aplicación
 - Formas de exponer servicios
 - `Laboratorio práctico: configuración de redes y volumenes para una aplicación`
- - Ejercicios prácticos
+ - Ejercicios prácticos 
 ### 04 - Docker-compose y optimización de contenedores Docker
 
 - Orquestación con docker-compose: definición y gestión de multi-contenedor
