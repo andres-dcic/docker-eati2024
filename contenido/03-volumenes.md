@@ -288,7 +288,7 @@ Vamos a trabajar con el siguiente Dockerfile [Dockerfile](/extras/02-imagenes/v0
 
 
 ```bash
-╰─ docker build -t docker-eati:latest ../extras/01-contenedores
+╰─ docker build -t php72apache ../extras/02-imagenes/v0.1.0/
 DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
 Install the buildx component to build images with BuildKit:
 https://docs.docker.com/go/buildx/

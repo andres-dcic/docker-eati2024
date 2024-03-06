@@ -176,17 +176,18 @@ ADD tiene mas capacidad,  ademas de agregar fichros carga y descomprime ficheros
 
 ## EXPOSE
 
-El comando **EXPOSE** le permite a Docker saber que cuando se ejecuta la imagen, el puerto y El protocolo definido será expuesto en runtime. Este comando no asigna el puerto a la máquina host, pero en su lugar abre el puerto para permitir el acceso al servicio en el contenedor red. Por ejemplo, en nuestro Dockerfile, le estamos diciendo a Docker que abra el puerto 80 cada vez la imagen corre:
+El comando **EXPOSE** le permite a Docker saber qué puertos serán expuestos por el contenedor cuando se ejecute. Este comando no asigna el puerto a la máquina host, pero en su lugar abre el puerto para permitir el acceso al servicio en el contenedor red. Por ejemplo, en nuestro Dockerfile, le estamos diciendo a Docker que abra el puerto 80 cada vez la imagen corre:
+
 ```bash
    EXPOSE 80 / tcp
 ```
+Es importante comprender que esta instrucción no publica los puertos, simplemente los documenta para que otros usuarios o desarrolladores conozcan qué puertos se esperan que estén disponibles.
 
 ## ENTRYPOINT and CMD
 
 Un Dockerfile nos permite definir un comando a ejecutar por defecto, para cuando se inicien contenedores a partir de nuestra imagen.
 
 Tenemos 2 instrucciones para este propósito: ENTRYPOINT y CMD.
-
 
 Si sólo especificas un CMD, entonces Docker ejecutará dicho comando usando el ENTRYPOINT por defecto, que es `/bin/sh -c`.
 
@@ -317,11 +318,8 @@ Estos valores persistirán al momento de lanzar un contenedor de la imagen cread
 
 ## .dockerignore (BUILD)
 
-Usar --tag o -t para la construccion (reemplazo de número de id del contenedor).
 
-No es necesario usar --file o -f si se esta en la misma carpeta que el fichero DockerFile, solo se necesita añadir el '.' al final.
-
-Se puede usar el fichero `.dockerignore` para excluir aquellos archivos o carpetas que no queremos incluir en la compilación. Por defecto, todos los archivos de la carpeta Dockerfile se subirán. 
+El archivo `.dockerignore` es utilizado por Docker para especificar qué archivos y directorios deben ser excluidos durante el proceso de construcción de una imagen Docker. Esto es similar al archivo .gitignore utilizado en Git para especificar qué archivos y directorios deben ser ignorados por Git.
 
   
 Mantener todos los elementos que desea usar en una imagen en la misma carpeta lo ayudará a mantener la cantidad de elementos, si usamos un comando COPY este copiara todo, si no queremos que se incluyan ficheros estos deben estar en este fichero como ejemplo:
