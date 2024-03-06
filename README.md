@@ -1,5 +1,5 @@
 # Docker EATI 2024 
- <img src="/contenido/img/docker-2.png" width="100"> <img src="/contenido/img/logo.png" width="100" style="margin-left: 0px"  >
+ <img src="/contenido/img/docker-2.png" width="100"> <img src="/contenido/img/logo.png"  width="80" height="80" style="margin-left: 30px"  >
 
 # Intro
 
@@ -38,7 +38,7 @@ Durante este curso aprenderán lo necesario para llevar una aplicación casera d
 - Exponer y probar nuestra aplicación
 - Formas de exponer servicios
 - `Laboratorio práctico: configuración de redes y volúmenes para una aplicación`
- - Ejercicios prácticos 
+ - [Ejercicios prácticos](/practica/03/)
 
 ### 04 - Docker-compose y optimización de contenedores Docker
 
