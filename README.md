@@ -30,14 +30,14 @@ Durante este curso aprenderán lo necesario para llevar una aplicación casera d
 - [Ejercicios prácticos](/practica/02/)
 
 
-### [03 - Volumenes y redes de contenedores Docker](contenido/03-volumenes.md)
+### [03 - Volúmenes y redes de contenedores Docker](contenido/03-volumenes.md)
 
 - Almacenamiento presistente en contenedores: volúmenes y enlaces de host
 - Redes en Docker: conceptos básicos y configuración
 - Comunicación entre contenedores
 - Exponer y probar nuestra aplicación
 - Formas de exponer servicios
-- `Laboratorio práctico: configuración de redes y volumenes para una aplicación`
+- `Laboratorio práctico: configuración de redes y volúmenes para una aplicación`
  - Ejercicios prácticos 
 
 ### 04 - Docker-compose y optimización de contenedores Docker
