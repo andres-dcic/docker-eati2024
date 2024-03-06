@@ -1,5 +1,5 @@
 # Docker EATI 2024 
- <img src="/contenido/img/docker-2.png" width="100"> <img src="/contenido/img/logo.png" width="80" style="margin-left: 20px"  >
+ <img src="/contenido/img/docker-2.png" width="100"> <img src="/contenido/img/logo.png" width="100" style="margin-left: 0px"  >
 
 # Intro
 
@@ -22,7 +22,7 @@ Durante este curso aprenderán lo necesario para llevar una aplicación casera d
 - `Laboratorio práctico: ejecución de su primer contenedor Docker y exploración de los comandos CLI de Docker`
 - [Ejercicios prácticos](/practica/01/)
 
-### [02 - Imagenes de contenedores Docker](contenido/02-imagenes.md)
+### [02 - Imágenes de contenedores Docker](contenido/02-imagenes.md)
 
 - Imágenes de Docker: comprensión de Dockerfiles, creación de imágenes y capas personalizadas.
 - Registros Docker: Registros públicos como Docker Hub, registros privados.
