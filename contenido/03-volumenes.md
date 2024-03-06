@@ -280,7 +280,6 @@ Para poder enlazar contenedores se debe utilizar la variable «–link» al crea
 
 
 ---
-
  # Día 3 - Docker Lab 
 
 ## Tocando los volúmenes
