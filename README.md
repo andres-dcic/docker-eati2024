@@ -8,7 +8,10 @@ La audiencia de este material es todo aquel que tenga una base de conocimientos 
 
 ## Objetivo
 Durante este curso aprenderán lo necesario para llevar una aplicación casera desde su concepción hasta tenerla corriendo con Docker siguiendo buenas prácticas.
+
 ## Contenido
+
+
 ### [01 - Fundamentos de Docker](contenido/01-contenedores.md)
 
 - Introducción a Docker: Qué es Docker, su importancia y beneficios.
@@ -36,6 +39,7 @@ Durante este curso aprenderán lo necesario para llevar una aplicación casera d
 - Formas de exponer servicios
 - `Laboratorio práctico: configuración de redes y volumenes para una aplicación`
  - Ejercicios prácticos 
+
 ### 04 - Docker-compose y optimización de contenedores Docker
 
 - Orquestación con docker-compose: definición y gestión de multi-contenedor
