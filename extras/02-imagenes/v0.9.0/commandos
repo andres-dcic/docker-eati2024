@@ -1,0 +1,9 @@
+docker run -e MYSQL_DATABASE=database -e MYSQL_USER=mysql_user -e MYSQL_ALLOW_EMPTY_PASSWORD=true -e MYSQL_PASSWORD=mysql_password -p 9906:3606 -d --name db mysql
+
+#Crear la imagen de myphp8-apache para que levante el index.php desde el
+#Dockerfile 
+docker build -t myphp8-apache .
+#index.php necesita conectarse a una base de datos mysql
+
+docker run -v "$(pwd)"/src:/var/www/html -p 8000:80 --link db -d myphp8-apache
+
