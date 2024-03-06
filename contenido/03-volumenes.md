@@ -373,3 +373,36 @@ Esa es una de las razones por la de utilizar volumenes en Docker.
 
 Dar un ejemplo de database !!!
 Para eso ver ejemplo en extra [Volumen_database](/extras/03-vol-redes/v0.1/Readme.md)
+
+
+## Comunicando dos contenedores (redes)
+
+Intentemos conectar dos contenedores:
+
+Primero creamos el contenedor de mysql:
+
+```bash
+╰─ docker run -e MYSQL_DATABASE=database -e MYSQL_USER=mysql_user -e MYSQL_ALLOW_EMPTY_PASSWORD=true -e MYSQL_PASSWORD=mysql_password -p 9906:3606 -d --name db mysql
+```
+
+Segundo creamos el contenedor de [php7apache](/extras/02-imagenes/v0.1.0/Dockerfile)
+
+```bash
+#Crear la imagen de myphp8-apache para que levante el index.php desde el
+#Dockerfile 
+╰─ docker build -t myphp7-apache .
+Sending build context to Docker daemon  3.584kB
+Step 1/2 : FROM php:7.2-apache
+ ---> c61d277263e1
+Step 2/2 : COPY src/ /var/www/html/
+ ---> a911166a6ce3
+Successfully built a911166a6ce3
+Successfully tagged php7apache:latest
+
+```
+
+Con la opción `--link` conectamos ambos contenedores 
+
+```bash
+╰─ docker run -v "$(pwd)"/src:/var/www/html -p 8000:80 --link db -d php7apache
+``` 
