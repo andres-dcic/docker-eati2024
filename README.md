@@ -40,7 +40,7 @@ Durante este curso aprenderán lo necesario para llevar una aplicación casera d
 - `Laboratorio práctico: configuración de redes y volúmenes para una aplicación`
  - [Ejercicios prácticos](/practica/03/)
 
-### 04 - Docker-compose y optimización de contenedores Docker
+### [04 - Docker-compose y optimización de contenedores Docker](/contenido/04-docker-compose.md) 
 
 - Orquestación con docker-compose: definición y gestión de multi-contenedor
 - Uso de variables de entorno en Docker-compose
