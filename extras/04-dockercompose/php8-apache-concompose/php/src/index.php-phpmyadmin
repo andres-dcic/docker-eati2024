@@ -1,0 +1,38 @@
+<?php
+//Use it after run docker-compose.yml with phpmyadmin 
+//These are the defined authentication environment in the db service
+
+// The MySQL service named in the docker-compose.yml.
+$host = 'db';
+
+// Database use name
+$user = 'mysql_user';
+
+//database user password
+$pass = 'mysql_password';
+
+
+$mydatabase = 'database';
+// check the mysql connection status
+
+$conn = new mysqli($host, $user, $pass, $mydatabase);
+
+// check the MySQL connection status
+$sql = 'SELECT * FROM users';
+
+if ($result = $conn->query($sql)) {
+    while ($data = $result->fetch_object()) {
+        $users[] = $data;
+    }
+}
+
+foreach ($users as $user) {
+    echo "<h2>";
+    echo $user->username . ": " . $user->password;
+    echo "</h2>";
+    echo "\n";
+}
+
+    echo "<h1> EATI 2024 <h1>";
+
+?>

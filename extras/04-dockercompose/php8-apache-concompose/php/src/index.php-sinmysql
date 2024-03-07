@@ -1,0 +1,5 @@
+<?php
+echo "Hola, corriendo desde el container con php8!!";
+?>
+
+

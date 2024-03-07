@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  #docker run -e MYSQL_DATABASE=database -e MYSQL_USER=mysql_user -e MYSQL_PASSWORD=mysql_password -e MYSQL_ALLOW_EMPTY_PASSWORD=true -d --name db mysql
+  db:
+    #container_name: db
+    image: mysql
+      #restart: always
+    environment:
+      #MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
+      MYSQL_DATABASE: database
+      MYSQL_USER: mysql_user
+      MYSQL_PASSWORD: mysql_password
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+    ports:
+      - "9906:3306"
+
+  #phpmyadmin:
+  #  image: phpmyadmin/phpmyadmin
+  #  ports:
+  #    - '8080:80'
+  #  environment:
+  #    PMA_HOST: db
+  #  depends_on:
+  #    - db
+
+  # docker run -v "$(pwd)"/src:/var/www/html -p 8001:80 --link db -d myphp8-apache
+  php8-apache:
+    #container_name: php8-apache
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    volumes:
+      - ./php/src:/var/www/html/
+    depends_on:
+      - db
+    ports:
+      - 8001:80
+  

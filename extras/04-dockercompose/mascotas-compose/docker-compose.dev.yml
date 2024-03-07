@@ -1,0 +1,15 @@
+version: "2.4"
+services:
+  web:
+    image: andr35/ej2compose-pet:v0.1.1
+    build: web
+    ports:
+      - 3000:3000
+  db:
+    image: andr35/ej2compose-database:v0.1.1
+    build: database
+    volumes:
+      - pets-data:/var/lib/postgresql/data
+
+volumes:
+  pets-data:
