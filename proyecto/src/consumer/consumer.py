@@ -8,10 +8,10 @@ from requests.exceptions import Timeout
 def main():
     if os.getenv("LOCAL"):
         print("Run container on local")
-        url = "http://172.17.0.2:8000"
+        url = "http://api:8000"
     else:
         print("Run container on dev env")
-        url = "http://172.17.0.2"
+        url = "http://api"
     while True:
         try:
             responde = requests.get(url, timeout=5)
