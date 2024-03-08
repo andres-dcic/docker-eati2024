@@ -1,0 +1,13 @@
+version: '3'
+services:
+  service1:
+    image: your_image1
+    networks:
+      - my_network
+  service2:
+    image: your_image2
+    networks:
+      - my_network
+networks:
+  my_network:
+    driver: bridge
