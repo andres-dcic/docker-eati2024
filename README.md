@@ -47,9 +47,9 @@ Durante este curso aprenderán lo necesario para llevar una aplicación casera d
 - Balanceo por medio de servicio
 - Multiples servicios, mismo label
 - `Laboratorio práctico: creación de imágenes de Docker personalizadas e implementación de aplicaciones de contenedores múltiples mediante Docker Compose`
-- Ejercicios prácticos
+- [Ejercicios prácticos](/practica/04/)
 
-### 05 - Proyecto integrador
+### [05 - Proyecto integrador ](/proyecto/proyecto.md)
 
 El proyecto integrador consiste en una aplicación funcional y poder contenerizarla en cualquier entorno utilizando Docker y Docker Compose. La aplicación consta de dos  servicios que interactúan entre sí para proporcionar funcionalidades específicas.
 
