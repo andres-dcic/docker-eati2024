@@ -63,7 +63,7 @@ LOCAL=true PYTHONUNBUFFERED="1" python3 consumer.py
 
 ![appconsumer](./img/app-consumer.png)
 
-- Resolver el miniproyecto anterior ya funcionando pero ahora utilizando DOCKER y DOCKER-COMPOSE
+- Resolver el proyecto anterior ya funcionando pero ahora utilizando `DOCKER` y `DOCKER-COMPOSE`
 
 ### Tiempo aproximado: 1hs
 
